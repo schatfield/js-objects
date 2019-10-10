@@ -6,7 +6,7 @@ const food1 = {
     temperature: "Medium rare"
 }
 
-console.log("food", food)
+console.log("food", food1)
 
 // const food2 = {
 //   type: "Hot dog",
@@ -91,7 +91,7 @@ console.log("The Wardrobe")
 console.log("wardrobe height", wardrobe.height)
 console.log("Wardrobe Manufacturer", wardrobe.manufacturer)
 console.log("Wardrobe Contents", wardrobe.contents)  
-console.log(wardrobe.log[0],wardrobe.log[1], wardrobe.log[2], wardrobe.log[3], wardrobe.log[4])
+console.log(wardrobe.contents[0],wardrobe.contents[1], wardrobe.contents[2], wardrobe.contents[3], wardrobe.contents[4])
 console.log("Wardrobe depth", wardrobe.depth)
 console.log("Wardrobe width", wardrobe.width)
 
@@ -136,3 +136,62 @@ const lassie = {
   lassie["well"] = "Real deep..."
   
   console.log("Lassie with well", lassie)
+
+  const empireStateBuilding = {
+    stories: 103,
+    height: 1453,
+    address: "350 Fifth Avenue, Manhattan, New York 10118",
+    squareFeet: 2768591,
+    constructionDate: 1931,
+    cost: 40948900,
+    owner: "Empire State Realty Trust",
+    eastWestLength: 424,
+    northSouthLength: 187,
+    architect: "Shreve, Lamb & Harmon"
+}
+
+console.log("Empire State Building", empireStateBuilding.height)
+console.log("Empire State Building", empireStateBuilding.stories)
+console.log("Empire State Building", empireStateBuilding.squareFeet)
+console.log("Empire State Building", empireStateBuilding.eastWestLength)
+console.log("Empire State Building", empireStateBuilding.northSouthLength)
+
+console.log("square bracket notation", empireStateBuilding["address"])
+console.log("square bracket notation", empireStateBuilding["constructionDate"])
+console.log("square bracket notation", empireStateBuilding["cost"])
+console.log("square bracket notation", empireStateBuilding["owner"])
+console.log("square bracket notation", empireStateBuilding["architect"])
+
+const addressKey = "address"    
+const constructionKey = "constructionDate"
+const ownerKey = "owner"
+const costKey = "cost"
+const architectKey = "architect"
+
+console.log(`The empire state building us at ${empireStateBuilding[addressKey]}.
+It was built in ${empireStateBuilding[constructionKey]} by ${empireStateBuilding[architectKey]}. It cost ${empireStateBuilding[costKey]} and is owned by ${empireStateBuilding[ownerKey]}.`)
+
+const nashvilleSoftwareSchool = {
+    founded: 2012,
+    director: "John Wark",
+    instructors: {
+        fullTime: ["Jisie", "Brenda", "Steve", "Joe", "Andy"],
+        partTime: ["Zoe", "Nathan"]
+    },
+    address: "500 Interstate Blvd. S"
+}
+console.log("All Instructors")
+
+const partTimeInstructors =nashvilleSoftwareSchool.instructors.partTime
+
+for(let i = 0; i < partTimeInstructors.length; i++) {
+    console.log(partTimeInstructors[i])
+}
+
+console.log("full time instructors", nashvilleSoftwareSchool.instructors.fullTime)
+
+const fullTimeInstructors = nashvilleSoftwareSchool.instructors.fullTime
+
+for(let i = 0; i < fullTimeInstructors.length; i++) {
+    console.log(fullTimeInstructors[i])
+}
