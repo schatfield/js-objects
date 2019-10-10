@@ -195,3 +195,12 @@ const fullTimeInstructors = nashvilleSoftwareSchool.instructors.fullTime
 for(let i = 0; i < fullTimeInstructors.length; i++) {
     console.log(fullTimeInstructors[i])
 }
+
+console.log("Andy", nashvilleSoftwareSchool.instructors.fullTime[4])
+
+// how Jisie did it (it refers to a variable we made above)://
+console.log("Andy: ", fullTimeInstructors[fullTimeInstructors.length - 1])
+
+console.log("Andy: ", fullTimeInstructors[4])
+
+console.log("Zoe", nashvilleSoftwareSchool.instructors.partTime[0])
