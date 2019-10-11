@@ -171,6 +171,7 @@ const architectKey = "architect"
 console.log(`The empire state building us at ${empireStateBuilding[addressKey]}.
 It was built in ${empireStateBuilding[constructionKey]} by ${empireStateBuilding[architectKey]}. It cost ${empireStateBuilding[costKey]} and is owned by ${empireStateBuilding[ownerKey]}.`)
 
+
 const nashvilleSoftwareSchool = {
     founded: 2012,
     director: "John Wark",
@@ -180,18 +181,38 @@ const nashvilleSoftwareSchool = {
     },
     address: "500 Interstate Blvd. S"
 }
-console.log("All Instructors")
 
-const partTimeInstructors =nashvilleSoftwareSchool.instructors.partTime
-
-for(let i = 0; i < partTimeInstructors.length; i++) {
-    console.log(partTimeInstructors[i])
+const nashvilleSoftwareSchool = {
 }
 
-console.log("full time instructors", nashvilleSoftwareSchool.instructors.fullTime)
+// Lightning Exercise 1: Output the names of the part-time instructors followed by the names of the full-time instructors in the console.
+console.log("All instructors")
+// console.log("All instructors")
 
-const fullTimeInstructors = nashvilleSoftwareSchool.instructors.fullTime
+const partTimeInstructors = nashvilleSoftwareSchool.instructors.partTime
 
-for(let i = 0; i < fullTimeInstructors.length; i++) {
-    console.log(fullTimeInstructors[i])
+ for(let i = 0; i < fullTimeInstructors.length; i++) {
+  console.log(fullTimeInstructors[i])
 }
+
+// Using a function to remove repetitive code
+function loopThroughInstructors(arrayOfInstructors) {
+  for(let i = 0; i < arrayOfInstructors.length; i++) {
+    console.log(arrayOfInstructors[i])
+  }
+}
+
+loopThroughInstructors(partTimeInstructors)
+loopThroughInstructors(fullTimeInstructors)
+
+// For in loop to iterate over the instructors object
+
+const instructorsObj = nashvilleSoftwareSchool.instructors
+for(let key in instructorsObj) {
+
+// Lightning Exercise 2: Output only Andy and Zoe in the console.
+
+// console.log("Andy: ", fullTimeInstructors[4])
+console.log("Andy: ", fullTimeInstructors[4])
+console.log("Andy: ", fullTimeInstructors[fullTimeInstructors.length - 1])
+console.log("Zoe: ", nashvilleSoftwareSchool.instructors.partTime[0])
